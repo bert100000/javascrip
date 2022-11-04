@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript Demo</h1>
+
+    <script>
+        // var , let ,conset
+        //常數宣告
+        const PI =3.1415926;
+        let radius =10 ;
+        
+
+        let area=radius**2*PI;
+        document.write("<h2 style='color:red'>面積為:"+area+"</h2>")
+        console.log(radius,typeof(radius));
+        alert("面積為:"+ area);
+        let x =Number(prompt("請輸入第一個數字:"));
+        let y =Number(prompt("請輸入第二個數字:"));
+        //字串樣板
+        document.write(`<h3>${x}+${y}=${x+y}</h3>`);
+
+        //字串
+        let email = "123bert@gmail.com";
+        console.log(email,typeof(email));
+        console.log(email.length);
+        console.log(email[0]);
+        console.log(email.indexOf("e"));
+        console.log(email.substring(0,5));
+        console.log(email.substring(0,3) === 123);
+
+        //javascrip的迴圈
+        for (let i =0; i<email.length; i++){
+            console.log(i,email[i]);
+        }
+
+
+
+
+    </script>
+</body>
+</html>
