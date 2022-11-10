@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>樂透預測</title>
+  </head>
+  <body>
+    <h2>大樂透預測號碼</h2>
+
+    <script>
+      // 45,12
+      //const compare = (a, b) => a - b;
+      function randInt(start, end, count = 6) {
+        let lotto = [];
+        if (count <= 0) {
+          return "次數錯誤";
+        }
+
+        do {
+          let x = Math.floor(Math.random() * (end - start + 1)) + start;
+          if (!lotto.includes(x)) {
+            lotto.push(x);
+          }
+        } while (lotto.length != count);
+        lotto.sort((a, b) => b - a);
+        lotto.push(Math.floor(Math.random() * (end - start + 1)) + start);
+
+        return lotto;
+      }
+      let lotto;
+      for (let i = 0; i < 6; i++) {
+        lottoNumber = randInt(1, 49, 6);
+        console.log(lottoNumber, lottoNumber.join(","));
+        document.write(`<h2>${lottoNumber.join("|")}</h2>`);
+      }
+    </script>
+  </body>
+</html>
